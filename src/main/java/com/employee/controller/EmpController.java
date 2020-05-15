@@ -42,7 +42,6 @@ public class EmpController {
 	// Saving Employee
 	@PostMapping("/add")
 	public Employee addEmployee(@RequestBody Employee employee) {
-		employee.setId(0);
 		employeeService.save(employee);
 		return employee;
 	}
